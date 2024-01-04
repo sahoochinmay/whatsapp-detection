@@ -11,7 +11,8 @@ const WhatsAppRedirect = () => {
     //   // Show alert and stay in your app
     //   alert("WhatsApp is not installed on your device.");
     // }
-    handleWhatsAppClick();
+    // handleWhatsAppClick();
+    document?.getElementById("clickme")?.click();
   }, []);
 
   //   const isAppInstalled = (urlScheme) => {
@@ -59,7 +60,7 @@ const WhatsAppRedirect = () => {
     document.addEventListener("visibilitychange", () => {
       // If the user navigated away, clear the timeout
       if (document.hidden) {
-        clearTimeout(timeout); 
+        clearTimeout(timeout);
       }
     });
   };
@@ -73,7 +74,9 @@ const WhatsAppRedirect = () => {
         click
       </a>
       <iframe src="whatsapp://send/?phone=9937159477&text=hi"></iframe>
-      <button onClick={handleWhatsAppClick}>handleWhatsAppClick</button>
+      <button onClick={handleWhatsAppClick} id="clickme">
+        handleWhatsAppClick
+      </button>
     </div>
   );
 };
