@@ -59,7 +59,7 @@ const WhatsAppRedirect = () => {
     document.addEventListener("visibilitychange", () => {
       // If the user navigated away, clear the timeout
       if (document.hidden) {
-        clearTimeout(timeout);
+        clearTimeout(timeout); 
       }
     });
   };
