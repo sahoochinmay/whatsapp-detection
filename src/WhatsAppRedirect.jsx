@@ -11,6 +11,7 @@ const WhatsAppRedirect = () => {
     //   // Show alert and stay in your app
     //   alert("WhatsApp is not installed on your device.");
     // }
+    // handleWhatsappRedirect();
   }, []);
 
   //   const isAppInstalled = (urlScheme) => {
@@ -30,12 +31,24 @@ const WhatsAppRedirect = () => {
 
   //     // return true; // Assuming WhatsApp is installed, change as needed
   //   };
+  //   const handleWhatsappRedirect = async () => {
+  //     // Check for WhatsApp installation on desktop browsers
+  //     const phoneNumber = "918837849092";
+  //     const encodedText = encodeURIComponent("Kindly Click on Send Message Button qr?i=");
+  //     const whatsappLink = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedText}`;
 
+  //     window.location.href = whatsappLink;
+  //   };
   return (
     <div>
       {/* Your component content */}
       <p>WhatsApp Redirect Page</p>
-      <iframe src="https://api.whatsapp.com/send/?phone=918837849092&text=Kindly+Click+on+Send+Message+Button+qr%3Fi%3D&type=phone_number&app_absent=0"></iframe>
+      {/* <iframe src="https://api.whatsapp.com/send/?phone=9937159477&text=hi"></iframe> */}
+      <a href="whatsapp://send/?phone=9937159477&text=hi" target="_blank" rel="noreferrer">
+        {" "}
+        click
+      </a>
+      <iframe src="https://api.whatsapp.com/send/?phone=9937159477&text=hi"></iframe>
     </div>
   );
 };
